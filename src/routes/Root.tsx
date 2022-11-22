@@ -1,14 +1,15 @@
 import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 export const Root = () => {
   return (
     <div className="">
-      <div className="w-full h-40 bg-green-200">Header</div>
+      <Header />
       <div className="flex">
-        <div className="w-60 bg-red-200">Sidebar</div>
-        <div className="w-full h-40 bg-yellow-200">
-          <Outlet />
-        </div>
+        <Sidebar />
+
+        <Outlet />
       </div>
     </div>
   );
